@@ -22,7 +22,7 @@ body, html, .App, #root {
   text-align: center;
 }
 
-.logo {
+.logo-login {
   margin-top: 50px;
   height: 15vmin;
 }
@@ -88,4 +88,9 @@ button.btn-login {
   text-align: center;
   margin: 30px auto 0 auto;
   line-height: 1;
+}
+
+.account-logo {
+  height: 10vmin;
+  margin: 15px auto;
 }
