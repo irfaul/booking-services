@@ -8,7 +8,7 @@ class Login extends Component {
             <h3>Login</h3>
 
             <div className="form-group">
-                <label>Emailku</label>
+                <label>Email</label>
                 <input type="email" className="form-control" placeholder="Masukkan email" />
             </div>
 
