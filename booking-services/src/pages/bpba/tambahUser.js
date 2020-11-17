@@ -8,7 +8,7 @@ class Tambah extends Component {
             { value: 'pbam', label: 'PBAM' },
             { value: 'pba', label: 'PBA' },
             { value: 'pcu', label: 'PCU' }
-          ]
+        ]
 
        return (
         <div>

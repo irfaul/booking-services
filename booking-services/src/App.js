@@ -1,33 +1,48 @@
 import './App.css';
 import './style/bootstrap.min.css';
 import BPBAHome from './pages/bpba/bpba-home';
+import DetailPCu from './pages/bpba/detail-user-pcu';
+import DetailPBA from './pages/bpba/detail-user-pba';
+import DetailPBAM from './pages/bpba/detail-user-pbam';
+import TambahUser from './pages/bpba/tambahUser';
+import EditUser from './pages/bpba/editUser';
 import Login from './pages/login';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
-import React, { Component } from 'react';
 
-
-class App extends Component {
-
-  render() {
-    return (
-      <div className="App">
-        <Router>
-          <Switch>
-              <Route path="/bpba/home">
-                <BPBAHome />
-              </Route>
-              <Route path="/">
-                <Login />
-              </Route>
-          </Switch>
-        </Router>
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="App">
+      <Router>
+        <Switch>
+            <Route path="/bpba/home">
+              <BPBAHome />
+            </Route>
+            <Route path="/bpba/detailpcu">
+              <DetailPCu />
+            </Route>
+            <Route path="/bpba/detailpba">
+              <DetailPBA />
+            </Route>
+            <Route path="/bpba/detailpbam">
+              <DetailPBAM />
+            </Route>
+            <Route path="/bpba/edituser">
+              <EditUser />
+            </Route>
+            <Route path="/bpba/tambahuser">
+              <TambahUser />
+            </Route>
+            <Route path="/">
+              <Login />
+            </Route>
+        </Switch>
+      </Router>
+    </div>
+  );
 }
 
 export default App;

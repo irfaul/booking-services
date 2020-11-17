@@ -1,0 +1,36 @@
+.detail-frame {
+    width: 450px;
+    margin: auto;
+    background: #ffffff;
+    padding: 40px 55px 45px 10px;
+    border-radius: 15px;
+    transition: all .3s;
+  }
+  
+  .radio label {
+    padding: 0px 3em 0px 3em;
+  }
+  
+  .radio label input {
+    margin: 20px 0 20px 2px;
+  }
+  
+  .btn-detail button {
+    margin: 250px 0 0 20px;
+    border-radius: 15px;
+    padding :5px 24px;
+    color: #FFFFFF;
+  }
+
+  .dropdown{
+    margin: 20px 0 20px 0;
+  }
+
+  .dropdown button{
+    width: 100%;
+  }
+
+  .dropdown-menu{
+    width: 100%;
+    text-align: center;
+  }
