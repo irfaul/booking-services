@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../style/bpba-detail-user.css';
+import '../../style/bpba-detail-user.css';
 
 class DetailUserPcu extends Component {
 
