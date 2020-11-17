@@ -21,21 +21,6 @@ function App() {
             <Route path="/bpba/home">
               <BPBAHome />
             </Route>
-            <Route path="/bpba/detailpcu">
-              <DetailPCu />
-            </Route>
-            <Route path="/bpba/detailpba">
-              <DetailPBA />
-            </Route>
-            <Route path="/bpba/detailpbam">
-              <DetailPBAM />
-            </Route>
-            <Route path="/bpba/edituser">
-              <EditUser />
-            </Route>
-            <Route path="/bpba/tambahuser">
-              <TambahUser />
-            </Route>
             <Route path="/">
               <Login />
             </Route>
