@@ -1,8 +1,7 @@
 import './App.css';
 import './style/bootstrap.min.css';
-import logo from './assets/logo-brimo.png';
-import Login from './component/login';
-import Home from './pages/bpba/home';
+import BPBAHome from './pages/bpba/bpba-home';
+import Login from './pages/login';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,15 +14,10 @@ function App() {
       <Router>
         <Switch>
             <Route path="/bpba/home">
-              <Home />
+              <BPBAHome />
             </Route>
             <Route path="/">
-              <img src={logo} className="login-logo" alt="Brimo"/>
-              <div className="auth-wrapper">
-                <div className="auth-inner">
-                  <Login />
-                </div>
-              </div>
+              <Login />
             </Route>
         </Switch>
       </Router>

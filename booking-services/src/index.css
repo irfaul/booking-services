@@ -22,7 +22,7 @@ body, html, .App, #root {
   text-align: center;
 }
 
-.logo-login {
+.login-logo {
   margin-top: 50px;
   height: 15vmin;
 }
@@ -90,7 +90,28 @@ button.btn-login {
   line-height: 1;
 }
 
+.navbar {
+  background-color: white;
+}
+
 .account-logo {
-  height: 10vmin;
-  margin: 15px auto;
+  height: 8vmin;
+  margin: 1vmin auto;
+}
+
+.account-hero {
+  width: 100%;
+}
+
+button.btn-add {
+  display: block;
+  padding: 10px 40px;
+  background-color:  #06529C;
+  color: white;
+}
+
+.btn-add {
+  text-align: center;
+  margin: 30px auto;
+  line-height: 1;
 }
