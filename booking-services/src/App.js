@@ -2,6 +2,8 @@ import './App.css';
 import './style/bootstrap.min.css';
 import BPBAHome from './pages/bpba/bpba-home';
 import DetailPCu from './pages/bpba/detail-user-pcu';
+import DetailPBA from './pages/bpba/detail-user-pba';
+import DetailPBAM from './pages/bpba/detail-user-pbam';
 import TambahUser from './pages/bpba/tambahUser';
 import EditUser from './pages/bpba/editUser';
 import Login from './pages/login';
@@ -21,6 +23,12 @@ function App() {
             </Route>
             <Route path="/bpba/detailpcu">
               <DetailPCu />
+            </Route>
+            <Route path="/bpba/detailpba">
+              <DetailPBA />
+            </Route>
+            <Route path="/bpba/detailpbam">
+              <DetailPBAM />
             </Route>
             <Route path="/bpba/edituser">
               <EditUser />
