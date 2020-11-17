@@ -1,46 +1,50 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
+import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 
-class LoginForm extends Component {
+const LoginForm = (props) => {
 
-    handleSubmit = e => {
+    let history = useHistory();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleSubmit = e => {
         e.preventDefault();
-        
+
         const data = {
-            email: this.email,
-            password: this.password
-        }
+            email: email,
+            password: password
+        };
 
         axios.post('guest/login', data)
             .then(res => {
-                console.log(res)
+                console.log(res);
+                history.push('/bpba/home');
             })
             .catch(err => {
-                console.log(err)
+                // console.log(err)
             })
     };
 
-    render() {
-       return (
-        <form onSubmit={this.handleSubmit}>
+        return (
+        <form onSubmit={handleSubmit}>
             <h3>Login</h3>
 
             <div className="form-group">
                 <label>Email</label>
                 <input type="email" className="form-control" placeholder="Masukkan email" 
-                    onChange= {e => this.email = e.target.value}/>
+                    onChange= {e => setEmail(e.target.value)}/>
             </div>
 
             <div className="form-group">
                 <label>Password</label>
                 <input type="password" className="form-control" placeholder="Masukkan password" 
-                    onChange= {e => this.password = e.target.value}/>
+                    onChange= {e => setPassword(e.target.value)}/>
             </div>
 
             <button className="btn btn-login">Login</button>
         </form>
        )
-    }
-}
+};
 
 export default LoginForm;
