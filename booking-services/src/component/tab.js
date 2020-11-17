@@ -1,5 +1,6 @@
 import React from 'react';
 import {Tabs, Tab} from '@material-ui/core';
+import UserTable from '../component/user-table';
 
 
 function TabPanel(props) {
@@ -29,7 +30,7 @@ export default function UserTabs() {
           <Tab label="PBAM" />
       </Tabs>
       <TabPanel value={value} index={0}>
-        Item One
+        <UserTable />
       </TabPanel>
       <TabPanel value={value} index={1}>
         Item Two
