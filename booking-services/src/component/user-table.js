@@ -51,13 +51,22 @@ const UserTable = (props) => {
               <Col>
                 <SearchBar {...props.searchProps} />
               </Col>
-              <Col>
-                <Link to="tambah-user">
-                  <Button color="primary" className="mr-2">
-                    Tambah User
-                  </Button>
-                </Link>
-              </Col>
+              <Row>
+                <Col>
+                  <Link to="tambah-user">
+                    <Button color="primary" className="mr-2">
+                      Tambah User
+                    </Button>
+                  </Link>
+                </Col>
+                <Col>
+                  <Link to="tambah-libur">
+                    <Button color="primary" className="mr-2">
+                      Atur Libur
+                    </Button>
+                  </Link>
+                </Col>
+              </Row>
             </Row>
             <hr />
             <BootstrapTable
