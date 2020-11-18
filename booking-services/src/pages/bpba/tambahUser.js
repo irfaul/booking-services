@@ -8,7 +8,7 @@ class Tambah extends Component {
             { value: 'pbam', label: 'PBAM' },
             { value: 'pba', label: 'PBA' },
             { value: 'pcu', label: 'PCU' }
-        ]
+          ]
 
        return (
         <div>
@@ -18,7 +18,7 @@ class Tambah extends Component {
                     <form>
                         <div className="form-group">
                             <label>Nama</label>
-                            <input type="email" className="form-control" placeholder="Masukkan email" />
+                            <input type="text" className="form-control" placeholder="Masukkan email" />
                         </div>
 
                         <div className="form-group">
@@ -28,7 +28,7 @@ class Tambah extends Component {
 
                         <div className="form-group">
                             <label>Tipe User</label>
-                            <Select options={options} />
+                            <Select options={options} onChange={e => this.role = e.target.value}/>
                         </div>
 
                         <div className="form-group">

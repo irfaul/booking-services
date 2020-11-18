@@ -111,16 +111,3 @@ button.btn-login {
   width: 100%;
   border-radius: 30px;
 }
-
-button.btn-add {
-  display: block;
-  padding: 10px 40px;
-  background-color:  #06529C;
-  color: white;
-}
-
-.btn-add {
-  text-align: center;
-  margin: 30px auto;
-  line-height: 1;
-}
