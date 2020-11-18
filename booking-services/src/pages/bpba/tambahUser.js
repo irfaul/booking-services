@@ -1,48 +1,88 @@
-import React, {Component} from 'react';
-import Select from 'react-select';
-import '../../style/bpba-tambah.css';
+import React,{useState} from "react";
+import axios from 'axios';
+import { FormGroup, Label, Input } from "reactstrap";
+import "../../style/bpba-tambah.css";
 
-class Tambah extends Component {
-    render() {
-        const options = [
-            { value: 'pbam', label: 'PBAM' },
-            { value: 'pba', label: 'PBA' },
-            { value: 'pcu', label: 'PCU' }
-          ]
+const Tambah = () => {
 
-       return (
-        <div>
-            <h3>Tambah User</h3>
-            <div className="auth-wrapper">
-                <div className="auth-inner">
-                    <form>
-                        <div className="form-group">
-                            <label>Nama</label>
-                            <input type="text" className="form-control" placeholder="Masukkan email" />
-                        </div>
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [role, setRole] = useState('');
 
-                        <div className="form-group">
-                            <label>Email</label>
-                            <input type="email" className="form-control" placeholder="Masukkan password" />
-                        </div>
+    const handleSubmit = e => {
+        e.preventDefault();
 
-                        <div className="form-group">
-                            <label>Tipe User</label>
-                            <Select options={options} onChange={e => this.role = e.target.value}/>
-                        </div>
+        const data = {
+            name: name,
+            email: email,
+            password: password,
+            role: role,
+            status: 1
+        };
 
-                        <div className="form-group">
-                            <label>Password</label>
-                            <input type="password" className="form-control" placeholder="Masukkan password" />
-                        </div>
+        axios.post('guest/register', data)
+            .then(res => {
+                console.log(res);
+            })
+            .catch(err => {
+                // console.log(err)
+            })
+    };
 
-                        <button className="btn btn-login">Simpan</button>
-                    </form>
-                </div>
-            </div>
+    return (
+      <div>
+        <h3>Tambah User</h3>
+        <div className="auth-wrapper">
+          <div className="auth-inner">
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label>Nama</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Masukkan nama"
+                  onChange= {e => setName(e.target.value)}
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Email</label>
+                <input
+                  type="email"
+                  className="form-control"
+                  placeholder="Masukkan email"
+                  onChange= {e => setEmail(e.target.value)}
+                />
+              </div>
+
+              <div className="form-group">
+                <FormGroup>
+                  <Label for="tipeUser">Tipe User</Label>
+                  <Input type="select" name="select" id="tipeUser" onChange={e => setRole(e.target.value)}>
+                    <option value="PCU">PCu</option>
+                    <option value="PBA">PBA</option>
+                    <option value="PBAM">PBAM</option>
+                  </Input>
+                </FormGroup>
+              </div>
+
+              <div className="form-group">
+                <label>Password</label>
+                <input
+                  type="password"
+                  className="form-control"
+                  placeholder="Masukkan password"
+                  onChange= {e => setPassword(e.target.value)}
+                />
+              </div>
+
+              <button className="btn btn-login">Tambah</button>
+            </form>
+          </div>
         </div>
-       )
-    }
+      </div>
+    );
 }
 
 export default Tambah;
