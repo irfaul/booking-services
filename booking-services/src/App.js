@@ -1,24 +1,27 @@
-import './App.css';
-import './style/bootstrap.min.css';
-import BPBAHome from './pages/bpba/bpba-home';
-import Login from './pages/login';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+import "./App.css";
+import BPBAHome from "./pages/bpba/bpba-home";
+import Login from "./pages/login";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import DetailUserPba from "./pages/bpba/detail-user-pba";
+import Tambah from "./pages/bpba/tambahUser";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
-            <Route path="/bpba/home">
-              <BPBAHome />
-            </Route>
-            <Route path="/">
-              <Login />
-            </Route>
+          <Route path="/bpba/tambah-user" exact>
+            <Tambah />
+          </Route>
+          <Route path="/bpba/detail-user/:id" exact>
+            <DetailUserPba />
+          </Route>
+          <Route path="/bpba/home" exact>
+            <BPBAHome />
+          </Route>
+          <Route path="/" exact>
+            <Login />
+          </Route>
         </Switch>
       </Router>
     </div>

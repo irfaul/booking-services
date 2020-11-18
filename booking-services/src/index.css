@@ -102,16 +102,3 @@ button.btn-login {
 .account-hero {
   width: 100%;
 }
-
-button.btn-add {
-  display: block;
-  padding: 10px 40px;
-  background-color:  #06529C;
-  color: white;
-}
-
-.btn-add {
-  text-align: center;
-  margin: 30px auto;
-  line-height: 1;
-}
