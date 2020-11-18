@@ -18,7 +18,7 @@ class Tambah extends Component {
                     <form>
                         <div className="form-group">
                             <label>Nama</label>
-                            <input type="email" className="form-control" placeholder="Masukkan email" />
+                            <input type="text" className="form-control" placeholder="Masukkan email" />
                         </div>
 
                         <div className="form-group">
