@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const { SearchBar } = Search;
 const columns = [
   {
-    dataField: "id",
+    dataField: "id1",
     text: "ID",
   },
   {
