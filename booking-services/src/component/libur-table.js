@@ -4,11 +4,12 @@ import BootstrapTable from "react-bootstrap-table-next";
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
 import paginationFactory from "react-bootstrap-table2-paginator";
 import { Link } from "react-router-dom";
+import { FaEdit,FaTrashAlt } from "react-icons/fa";
 
 const { SearchBar } = Search;
 const columns = [
   {
-    dataField: "id1",
+    dataField: "id",
     text: "ID",
   },
   {
@@ -16,8 +17,12 @@ const columns = [
     text: "Nama",
   },
   {
-    dataField: "role",
-    text: "Tipe User",
+    dataField: "start",
+    text: "Tanggal Mulai",
+  },
+  {
+    dataField: "end",
+    text: "Tanggal Selesai",
   },
   {
     dataField: "link",
@@ -25,23 +30,30 @@ const columns = [
     formatter: (rowContent, row) => {
       return (
         <div>
-          <Link to={"detail-user/" + row.id}>
-            <Button color="primary" className="mr-2">
-              Detail
+          <Col>
+          <Link to={"edit-libur/" + row.id}>
+            <Button color="warning" className="mr-2">
+              <FaEdit/>
             </Button>
           </Link>
+          <Link to={"hapus-user/" + row.id}>
+            <Button color="danger" className="mr-2">
+              <FaTrashAlt/>
+            </Button>
+          </Link>
+          </Col>
         </div>
       );
     },
   },
 ];
 
-const UserTable = (props) => {
+const LiburTable = (props) => {
   return (
     <Container>
       <ToolkitProvider
         keyField="id"
-        data={props.users}
+        data={props.holidays}
         columns={columns}
         search
       >
@@ -52,22 +64,11 @@ const UserTable = (props) => {
                 <SearchBar {...props.searchProps} />
               </Col>
               <Col>
-                <Row>
-                  <Col>
-                    <Link to="tambah-user">
-                      <Button color="primary" className="mr-2">
-                        Tambah User
-                      </Button>
-                    </Link>
-                  </Col>
-                  <Col>
-                    <Link to="atur-libur">
-                      <Button color="primary" className="mr-2">
-                        Atur Libur
-                      </Button>
-                    </Link>
-                  </Col>
-                </Row>
+                <Link to="tambah-libur">
+                  <Button color="primary" className="mr-2">
+                    Tambah Libur
+                  </Button>
+                </Link>
               </Col>
             </Row>
             <hr />
@@ -82,4 +83,4 @@ const UserTable = (props) => {
   );
 };
 
-export default UserTable;
+export default LiburTable;
