@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import DetailUserPba from "./pages/bpba/detail-user-pba";
 import Tambah from "./pages/bpba/tambahUser";
 import TambahLibur from "./pages/bpba/tambah-libur";
+import AturLibur from "./pages/bpba/atur-libur";
+import EditLibur from './pages/bpba/edit-libur';
 
 function App() {
   return (
@@ -25,6 +27,12 @@ function App() {
           </Route>
           <Route path="/" exact>
             <Login />
+          </Route>
+          <Route path="/bpba/atur-libur" exact>
+            <AturLibur />
+          </Route>
+          <Route path="/bpba/edit-libur/:id" exact>
+            <EditLibur />
           </Route>
         </Switch>
       </Router>
