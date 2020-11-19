@@ -99,6 +99,15 @@ button.btn-login {
   margin: 1vmin auto;
 }
 
+.icons-bell {
+  margin-right: 10px;
+}
+
+.div-hero {
+  margin: 0px 20px;
+}
+
 .account-hero {
   width: 100%;
+  border-radius: 30px;
 }
