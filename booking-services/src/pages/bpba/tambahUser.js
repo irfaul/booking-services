@@ -60,7 +60,8 @@ const Tambah = () => {
                 <FormGroup>
                   <Label for="tipeUser">Tipe User</Label>
                   <Input type="select" name="select" id="tipeUser" onChange={e => setRole(e.target.value)}>
-                    <option value="PCU">PCu</option>
+                    <option disabled >Pilih Tipe User</option>
+                    <option value="PCU">PCU</option>
                     <option value="PBA">PBA</option>
                     <option value="PBAM">PBAM</option>
                   </Input>

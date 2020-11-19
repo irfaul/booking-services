@@ -37,7 +37,7 @@ body, html, .App, #root {
 }
 
 .auth-inner {
-  width: 450px;
+  width: 80%;
   margin: auto;
   background: #ffffff;
   border-style: solid;
