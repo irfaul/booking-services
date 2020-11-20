@@ -55,7 +55,7 @@ class PBAMHome extends Component {
             <Row style={{marginTop:'1em'}}>
                 <Col sm={8}>Revi<hr/></Col>
                 <Col sm={4}>
-                    <Link to="laporan-pba">
+                    <Link to="laporan-kinerja-pba">
                         <Button variant="warning">Lihat</Button>
                     </Link>
                 </Col>
