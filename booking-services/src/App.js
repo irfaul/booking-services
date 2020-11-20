@@ -11,6 +11,7 @@ import EditLibur from "./pages/bpba/edit-libur";
 import AturJadwal from "./pages/pbam/atur-jadwal"
 import PBAMHome from "./pages/pbam/pbam-home";
 import AturPba from "./pages/pbam/atur-pba";
+import PBAHome from "./pages/pba/pba-home";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="/pbam/home" exact component={PBAMHome} />
           <Route path="/pbam/atur-jadwal" exact component={AturJadwal} />
           <Route path="/pbam/atur-pba" exact component={AturPba} />
+          <Route path="/pba/home" exact component={PBAHome} />
         </Switch>
       </Router>
     </div>
