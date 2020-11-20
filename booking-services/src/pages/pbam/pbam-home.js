@@ -63,7 +63,9 @@ class PBAMHome extends Component {
             <Row>
                 <Col sm={8}>Jeni<hr/></Col>
                 <Col sm={4}>
-                    <Button variant="warning">Lihat</Button>
+                    <Link to="laporan-kinerja-pba">
+                        <Button variant="warning">Lihat</Button>
+                    </Link>
                 </Col>
             </Row>
             <div style={{marginTop:'3em'}}>
