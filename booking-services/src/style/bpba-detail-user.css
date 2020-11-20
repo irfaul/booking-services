@@ -2,7 +2,7 @@
     width: 450px;
     margin: auto;
     background: #ffffff;
-    padding: 40px 55px 45px 10px;
+    padding: 20px 55px 45px 10px;
     border-radius: 15px;
     transition: all .3s;
   }
@@ -10,13 +10,21 @@
   .form-check  {
     padding: 0px 3em 0px 3em;
   }
+
+  .form-check-input {
+    margin-left: 0.5rem!important;
+  }
+
+  .form-check-label {
+    margin-left: 25px;;
+  }
   
   .radio label input {
     margin: 20px 0 20px 2px;
   }
   
   .btn-detail button {
-    margin: 150px 0 0 20%;
+    margin: 15px 0 0 10px;
     border-radius: 15px;
     padding :5px 20px;
     color: #FFFFFF;
@@ -33,4 +41,13 @@
   .dropdown-menu{
     width: 100%;
     text-align: center;
+  }
+
+  .box-wrapper {
+    border-style: solid;
+    border-width: medium;
+    border-color: #06529C;
+    padding: 20px;
+    margin: 10px 30px;
+    height: 250px;
   }

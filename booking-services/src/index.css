@@ -111,3 +111,19 @@ button.btn-login {
   width: 100%;
   border-radius: 30px;
 }
+
+.react-bootstrap-table {
+  overflow-x: auto!important;
+}
+
+.react-bootstrap-table table {
+  table-layout: unset!important;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: end;
+}
