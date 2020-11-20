@@ -20,12 +20,12 @@ class LaporanKinerjaPba extends Component {
             </div>   
         </div>
         <div className="row">
-            <div className="col-sm-4 text-center">PCu</div>
+            <div className="col-sm-4 text-center">PBA</div>
         </div>
 
         <Row style={{marginTop:'2em'}}>
-            <Col sm={2}>Tanggal</Col>
-            <Col sm={10}>13-11-2020</Col>
+            <Col sm={2}> <h5>Tanggal</h5></Col>
+            <Col sm={2}>13-11-2020</Col>
         </Row>
 
         {/* tabel 1 dummy*/}
