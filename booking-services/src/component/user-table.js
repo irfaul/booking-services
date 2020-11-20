@@ -8,12 +8,12 @@ import { Link } from "react-router-dom";
 const { SearchBar } = Search;
 const columns = [
   {
-    dataField: "id1",
-    text: "ID",
-  },
-  {
     dataField: "name",
     text: "Nama",
+  },
+  {
+    dataField: "email",
+    text: "Email",
   },
   {
     dataField: "role",
@@ -61,7 +61,7 @@ const UserTable = (props) => {
                     </Link>
                   </Col>
                   <Col>
-                    <Link to="tambah-libur">
+                    <Link to="daftar-libur">
                       <Button color="primary" className="mr-2">
                         Atur Libur
                       </Button>
