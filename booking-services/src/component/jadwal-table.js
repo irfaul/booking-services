@@ -6,6 +6,7 @@ import ToolkitProvider from "react-bootstrap-table2-toolkit";
 import paginationFactory from "react-bootstrap-table2-paginator";
 import { Link } from "react-router-dom";
 import { FaEdit,FaTrashAlt } from "react-icons/fa";
+import TambahJadwal from "../pages/pbam/tambah-jadwal";
 
 const columns = [
   {
@@ -59,11 +60,7 @@ const JadwalTable = (props) => {
                 <MaterialUIPickers/>
               </Col>
               <Col>
-                <Link to="tambah-jadwal">
-                  <Button color="primary" className="mr-2">
-                    Tambah Jadwal
-                  </Button>
-                </Link>
+                  <TambahJadwal/>
               </Col>
             </Row>
             <hr />
