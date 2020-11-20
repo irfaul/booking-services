@@ -5,8 +5,9 @@ import MaterialUIPickers from '../pages/pbam/date-picker';
 import ToolkitProvider from "react-bootstrap-table2-toolkit";
 import paginationFactory from "react-bootstrap-table2-paginator";
 import { Link } from "react-router-dom";
-import { FaEdit,FaTrashAlt } from "react-icons/fa";
+import { FaTrashAlt } from "react-icons/fa";
 import TambahJadwal from "../pages/pbam/tambah-jadwal";
+import EditJadwal from "../pages/pbam/edit-jadwal";
 
 const columns = [
   {
@@ -28,11 +29,7 @@ const columns = [
       return (
         <div>
           <Col>
-          <Link to={"edit-libur/" + row.id}>
-            <Button color="warning" className="mr-2">
-              <FaEdit/>
-            </Button>
-          </Link>
+          <EditJadwal/>
           <Link to={"hapus-user/" + row.id}>
             <Button color="danger" className="mr-2">
               <FaTrashAlt/>
