@@ -8,6 +8,11 @@ import DetailUserPbam from "./pages/bpba/detail-user-pbam";
 import Edit from "./pages/bpba/editUser";
 import DaftarLibur from "./pages/bpba/daftar-libur";
 import EditLibur from "./pages/bpba/edit-libur";
+import AturJadwal from "./pages/pbam/atur-jadwal"
+import PBAMHome from "./pages/pbam/pbam-home";
+import AturPba from "./pages/pbam/atur-pba";
+import PBAHome from "./pages/pba/pba-home";
+import LaporanKinerjaPba from "./pages/pbam/laporan-kinerja-pba";
 
 function App() {
   return (
@@ -30,6 +35,11 @@ function App() {
           />
           <Route path="/bpba/home" exact component={BPBAHome} />
           <Route path="/" exact component={Login} />
+          <Route path="/pbam/home" exact component={PBAMHome} />
+          <Route path="/pbam/atur-jadwal" exact component={AturJadwal} />
+          <Route path="/pbam/laporan-kinerja-pba" exact component={LaporanKinerjaPba} />
+          <Route path="/pbam/atur-pba" exact component={AturPba} />
+          <Route path="/pba/home" exact component={PBAHome} />
         </Switch>
       </Router>
     </div>

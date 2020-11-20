@@ -32,9 +32,11 @@ class PBAMHome extends Component {
                         </Link>
                     </Col>
                     <Col>
-                    <button className="event-icon">
-                        <EventIcon style={styles.largeIcon} onClick=""/>
-                    </button>
+                    <Link to="atur-pba">
+                        <button className="event-icon">
+                            <EventIcon style={styles.largeIcon} onClick=""/>
+                        </button>
+                    </Link>
                     </Col>
                 </Row>
                 <Row>
@@ -53,7 +55,7 @@ class PBAMHome extends Component {
             <Row style={{marginTop:'1em'}}>
                 <Col sm={8}>Revi<hr/></Col>
                 <Col sm={4}>
-                    <Link to="laporan-pba">
+                    <Link to="laporan-kinerja-pba">
                         <Button variant="warning">Lihat</Button>
                     </Link>
                 </Col>
@@ -61,7 +63,9 @@ class PBAMHome extends Component {
             <Row>
                 <Col sm={8}>Jeni<hr/></Col>
                 <Col sm={4}>
-                    <Button variant="warning">Lihat</Button>
+                    <Link to="laporan-kinerja-pba">
+                        <Button variant="warning">Lihat</Button>
+                    </Link>
                 </Col>
             </Row>
             <div style={{marginTop:'3em'}}>

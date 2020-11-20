@@ -1,17 +1,14 @@
 import React, {Component} from 'react';
-import '../../style/pbam-home.css';
 
 import Container from '@material-ui/core/Container';
 
 import Nav from '../../component/nav';
 import Hero from '../../component/hero';
-import EventIcon from '@material-ui/icons/Event';
 import MaterialUIPickers from './date-picker'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import Table from 'react-bootstrap/Table'
-import Jadwal from './jadwal-pertemuan';
+import JadwalPertemuan from './jadwal-pertemuan';
+
 
 
 class PBAHome extends Component {
@@ -39,12 +36,12 @@ class PBAHome extends Component {
                     <tr>
                         <td>Joni</td>
                         <td>11.00 WIB</td>
-                        <td><Button variant="warning" onClick="">Lihat</Button></td>
+                        <td><JadwalPertemuan/></td>
                     </tr>
                     <tr>
                         <td>Sherina</td>
                         <td>13.00 WIB</td>
-                        <td><Button variant="warning">Lihat</Button></td>
+                        <td><JadwalPertemuan/></td>
                     </tr>
                 </tbody>
             </Table>
