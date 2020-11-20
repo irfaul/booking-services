@@ -32,9 +32,11 @@ class PBAMHome extends Component {
                         </Link>
                     </Col>
                     <Col>
-                    <button className="event-icon">
-                        <EventIcon style={styles.largeIcon} onClick=""/>
-                    </button>
+                    <Link to="atur-pba">
+                        <button className="event-icon">
+                            <EventIcon style={styles.largeIcon} onClick=""/>
+                        </button>
+                    </Link>
                     </Col>
                 </Row>
                 <Row>
