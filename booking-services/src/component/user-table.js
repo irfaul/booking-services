@@ -61,11 +61,7 @@ const UserTable = (props) => {
                     </Link>
                   </Col>
                   <Col>
-<<<<<<< HEAD
                     <Link to="daftar-libur">
-=======
-                    <Link to="atur-libur">
->>>>>>> 481aac36a9f0f8a8a9617954810861f93bf9ea05
                       <Button color="primary" className="mr-2">
                         Atur Libur
                       </Button>
