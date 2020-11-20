@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import '../../style/pbam-home.css';
 
 import Container from '@material-ui/core/Container';
 
@@ -12,6 +11,7 @@ import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import Table from 'react-bootstrap/Table'
 import StarIcon from '@material-ui/icons/Star';
+import { Link } from "react-router-dom";
 
 
 class PBAMHome extends Component {
@@ -25,9 +25,11 @@ class PBAMHome extends Component {
             <Container maxWidth="md" className="user-list">
                 <Row>
                     <Col style={{textAlign: "right", marginRight:'5em'}}>
-                    <button className="event-icon" >
-                        <EventIcon style={styles.largeIcon} onClick=""/>
-                    </button>
+                    <Link to="atur-jadwal">
+                        <button className="event-icon" >
+                            <EventIcon style={styles.largeIcon} onClick=""/>
+                        </button>
+                        </Link>
                     </Col>
                     <Col>
                     <button className="event-icon">
@@ -50,11 +52,17 @@ class PBAMHome extends Component {
             </div>
             <Row style={{marginTop:'1em'}}>
                 <Col sm={8}>Revi<hr/></Col>
-                <Col sm={4}><Button variant="warning">Lihat</Button></Col>
+                <Col sm={4}>
+                    <Link to="laporan-pba">
+                        <Button variant="warning">Lihat</Button>
+                    </Link>
+                </Col>
             </Row>
             <Row>
                 <Col sm={8}>Jeni<hr/></Col>
-                <Col sm={4}><Button variant="warning">Lihat</Button></Col>
+                <Col sm={4}>
+                    <Button variant="warning">Lihat</Button>
+                </Col>
             </Row>
             <div style={{marginTop:'3em'}}>
                 <h5>Rangking PBA</h5> 
