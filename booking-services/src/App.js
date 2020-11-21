@@ -13,6 +13,7 @@ import AturPba from "./pages/pbam/atur-pba";
 import PBAHome from "./pages/pba/pba-home";
 import LaporanKinerjaPba from "./pages/pbam/laporan-kinerja-pba";
 import PCUHome from "./pages/pcu/pcu-home";
+import TambahBooking from "./pages/pcu/formulir-booking";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route path="/pba/home" exact component={PBAHome} />
 
           <Route path="/pcu/home" exact component={PCUHome}/>
+          <Route path="/pcu/tambah-booking" exact component={TambahBooking}/>
 
         </Switch>
       </Router>
