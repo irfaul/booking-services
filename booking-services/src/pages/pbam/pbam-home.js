@@ -41,7 +41,7 @@ class PBAMHome extends Component {
                 </Row>
                 <Row>
                     <Col style={{textAlign: "right", marginTop:'1em',marginRight:'5em'}}>
-                    <h5>Atur Jadwal</h5>
+                    <h5 style={{textAlign:"right"}}>Atur Jadwal</h5>
                     </Col>
                     <Col style={{ marginTop:'1em'}}>
                     <h5>Atur PA</h5>
