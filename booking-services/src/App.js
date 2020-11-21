@@ -14,6 +14,7 @@ import PBAHome from "./pages/pba/pba-home";
 import LaporanKinerjaPba from "./pages/pbam/laporan-kinerja-pba";
 import PCUHome from "./pages/pcu/pcu-home";
 import TambahBooking from "./pages/pcu/formulir-booking";
+import Pemberitahuan from "./pages/pba/pemberitahuan"
 
 function App() {
   return (
@@ -40,7 +41,9 @@ function App() {
           <Route path="/pbam/atur-jadwal" exact component={AturJadwal} />
           <Route path="/pbam/laporan-kinerja-pba" exact component={LaporanKinerjaPba} />
           <Route path="/pbam/atur-pba" exact component={AturPba} />
+
           <Route path="/pba/home" exact component={PBAHome} />
+          <Route path="/pba/pemberitahuan" exact component={Pemberitahuan} />
 
           <Route path="/pcu/home" exact component={PCUHome}/>
           <Route path="/pcu/tambah-booking" exact component={TambahBooking}/>
