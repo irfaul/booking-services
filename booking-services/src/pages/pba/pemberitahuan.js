@@ -4,7 +4,8 @@ import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button'
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import AturBooking from './atur-booking'
 
 class Pemberitahuan extends Component {
     render() {
@@ -17,13 +18,13 @@ class Pemberitahuan extends Component {
             <Card style={{marginBottom:'2em'}}>
                 <Card.Body>
                     <Card.Subtitle className="mb-2 text-muted">07-11-2020, 08.00 WIB</Card.Subtitle>
-                    <Card.Title>Astuti melakukan booking</Card.Title>
+                    <Card.Title>Joni melakukan booking</Card.Title>
                     <Row>
                         <Col sm={10}>
                         <Card.Text>Status : Menunggu</Card.Text>
                         </Col>
                         <Col sm={2}>
-                        <Button variant="primary" style={{width:'5em'}}>Atur</Button>
+                        <AturBooking/>
                         </Col>
                     </Row>      
                 </Card.Body>
@@ -31,14 +32,14 @@ class Pemberitahuan extends Component {
 
             <Card style={{marginBottom:'2em'}}>
                 <Card.Body>
-                    <Card.Subtitle className="mb-2 text-muted">07-11-2020, 08.00 WIB</Card.Subtitle>
-                    <Card.Title>Astuti melakukan booking</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">10-11-2020, 09.00 WIB</Card.Subtitle>
+                    <Card.Title>Halimah melakukan booking</Card.Title>
                     <Row>
                         <Col sm={10}>
-                        <Card.Text>Status : Menunggu</Card.Text>
+                        <Card.Text>Status : Dibatalkan</Card.Text>
                         </Col>
                         <Col sm={2}>
-                        <Button variant="primary" style={{width:'5em'}}>Atur</Button>
+                        <AturBooking/>
                         </Col>
                     </Row>      
                 </Card.Body>

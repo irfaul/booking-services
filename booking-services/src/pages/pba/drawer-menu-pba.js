@@ -80,14 +80,6 @@ const DrawersMenuPba = (props) => {
                 </ListItem>
                 </Link>
 
-                {/* Jadwal Petemuan */}
-                <ListItem button onClick={null}>
-                    <ListItemIcon className={classes.listItem}>
-                        <TodayIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Jadwal Pertemuan" />
-                </ListItem>
-
                 {/* logout */}
                 <div style={{position:'fixed', bottom:1, width: 250}}>
                     <Divider />
