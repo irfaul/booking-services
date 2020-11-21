@@ -1,4 +1,3 @@
-import "./App.css";
 import BPBAHome from "./pages/bpba/bpba-home";
 import Login from "./pages/login";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
