@@ -8,6 +8,7 @@ import MaterialUIPickers from './date-picker'
 import Button from 'react-bootstrap/Button'
 import Table from 'react-bootstrap/Table'
 import JadwalPertemuan from './jadwal-pertemuan';
+import RiwayatPertemuan from './detail-riwayat-pertemuan';
 
 
 
@@ -60,12 +61,12 @@ class PBAHome extends Component {
                     <tr>
                         <td>Astuti</td>
                         <td>12-11-2020</td>
-                        <td><Button variant="warning">Detail</Button></td>
+                        <td><RiwayatPertemuan/></td>
                     </tr>
                     <tr>
                         <td>Siti</td>
                         <td>09-11-2020</td>
-                        <td><Button variant="warning">Detail</Button></td>
+                        <td><RiwayatPertemuan/></td>
                     </tr>
                 </tbody>
             </Table> 
