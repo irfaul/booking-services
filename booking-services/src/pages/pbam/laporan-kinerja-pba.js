@@ -95,7 +95,7 @@ class LaporanKinerjaPba extends Component {
         </table>
              
         </div>
-        <div className= "btn-detail">
+            <div className= "btn-detail">
                 <Link to="./home">
                     <button type= "button" className="btn btn-outline" style={{backgroundColor: '#F37024'}} >Kembali</button>
                 </Link>

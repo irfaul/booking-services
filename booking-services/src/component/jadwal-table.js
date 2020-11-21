@@ -68,6 +68,11 @@ const JadwalTable = (props) => {
           </div>
         )}
       </ToolkitProvider>
+        <div className= "btn-detail" style={{textAlign:'right'}}>
+          <Link to="./home">
+              <button type= "button" className="btn btn-outline" style={{backgroundColor: '#F37024'}} >Kembali</button>
+          </Link>
+        </div> 
     </Container>
   );
 };
