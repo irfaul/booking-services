@@ -18,6 +18,7 @@ class DetailUserPbam extends Component {
       description: "enable",
       pbam: [],
       pbam_id: "",
+      pbam_name: "",
     };
     this.handleClick = this.handleClick.bind(this);
     this.handlePBAM = this.handlePBAM.bind(this);
@@ -72,6 +73,7 @@ class DetailUserPbam extends Component {
 
     const data = {
       pbam_id: this.state.pbam_id,
+      pbam_name: this.state.pbam_name
     };
 
     axios
@@ -90,11 +92,6 @@ class DetailUserPbam extends Component {
   }
 
   render() {
-    // const pbam_filter = this.state.pbam.filter((data) => {
-    //   return data._id == this.state.user.assign_to;
-    // });
-    // console.log(this.state.user.assign_to)
-    // console.log(pbam_filter);
     return (
       <div className="container detail-frame">
         <h3
@@ -202,7 +199,7 @@ class DetailUserPbam extends Component {
               <p className="text-left font-weight-light">
                 PBAM :{" "}
                 <span className="font-weight-bold">
-                  {this.state.user.assign_to}
+                  {this.state.user.assign_to.name}
                 </span>
               </p>
               <hr />
@@ -213,7 +210,7 @@ class DetailUserPbam extends Component {
                     type="select"
                     name="select"
                     id="tipeUser"
-                    onChange={(e) => this.setState({ pbam_id: e.target.value })}
+                    onChange={(e) => this.setState({ pbam_id: e.target.value, pbam_name: e.target.innerHTML })}
                   >
                     {this.state.pbam.map((data) => (
                       <option value={data._id}>{data.name}</option>
