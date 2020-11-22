@@ -17,6 +17,7 @@ import TambahBooking from "./pages/pcu/formulir-booking";
 import Pemberitahuan from "./pages/pba/pemberitahuan"
 import RiwayatPertemuan from "./pages/pba/detail-riwayat-pertemuan";
 import DetailPertemuan from "./pages/pcu/detail-pertemuan";
+import EditPertemuan from "./pages/pcu/edit-pertemuan";
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
           <Route path="/bpba/daftar-libur" exact component={DaftarLibur} />
           <Route path="/bpba/tambah-libur" exact component={TambahLibur} />
           <Route path="/bpba/edit-libur/:id" exact component={EditLibur} />
+          
+
 
           {/*Route PBAM*/}
           <Route path="/pbam/home" exact component={PBAMHome} />
@@ -48,6 +51,7 @@ function App() {
           <Route path="/pcu/home" exact component={PCUHome}/>
           <Route path="/pcu/tambah-booking" exact component={TambahBooking}/>
           <Route path="/pcu/detail-pertemuan" exact component={DetailPertemuan}/>
+          <Route path="/pcu/edit-pertemuan" exact component={EditPertemuan} />
 
 
           {/*Login*/}
