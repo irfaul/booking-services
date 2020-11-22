@@ -2,13 +2,13 @@ import React, {Component} from 'react';
 
 import Container from '@material-ui/core/Container';
 
-import Nav from '../../component/nav';
+import NavPba from './nav-pba';
 import Hero from '../../component/hero';
 import MaterialUIPickers from './date-picker'
-import Button from 'react-bootstrap/Button'
 import Table from 'react-bootstrap/Table'
 import JadwalPertemuan from './jadwal-pertemuan';
 import RiwayatPertemuan from './detail-riwayat-pertemuan';
+
 
 
 
@@ -16,12 +16,12 @@ class PBAHome extends Component {
 
     render() {
        return (
-        <div>
-            <Nav />
-            <Hero />
-                
+        <div>    
             <Container maxWidth="md" className="user-list">
-            <div>
+            <NavPba/>
+            <Hero />
+
+            <div style={{marginTop:'2em'}}>
                 <h5>Jadwal Pertemuan PCu</h5> 
                 <div className="line"></div>  
                 <MaterialUIPickers/>

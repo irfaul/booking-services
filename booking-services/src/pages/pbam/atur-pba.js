@@ -7,12 +7,13 @@ import Row from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
 import { FormGroup, Input } from "reactstrap";
+import { Link } from "react-router-dom";
 
 
 class AturPba extends Component {
     render(){
         return(
-            <Container>
+            <Container className="auth-inner">
             <div>
                 <h3>Atur PBA</h3>
             </div>
@@ -63,8 +64,16 @@ class AturPba extends Component {
                         </tr>
                     </tbody>
                 </Table>
+                <div className= "btn-detail">
+                    <button type="button"  className="btn btn-outline" style={{backgroundColor: '#2568A9'}} >Simpan</button>
+                    <Link to="./home">
+                    <button type= "button" className="btn btn-outline" style={{backgroundColor: '#F37024'}} >Batal</button>
+                    </Link> 
+                </div> 
             </div>
+            
           </Container>
+          
           
         
         )
