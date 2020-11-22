@@ -2,10 +2,42 @@ import React, {Component} from 'react';
 import '../../style/form-bookingPCU.css';
 import {  Form, Label, Input, FormGroup } from 'reactstrap';
 
+import SweetAlert from 'react-bootstrap-sweetalert';
 
 
 
 class Formulir extends Component {
+    constructor(props) {
+        super(props);
+    
+        this.state = {
+          alert: null
+        };
+      } 
+    
+      deleteThisGoal() {
+        const getAlert = () => (
+          <SweetAlert 
+            success 
+            title="Sukses !" 
+            onConfirm={() => this.hideAlert()}
+          >
+            Pertemuan Berhasil di Jadwalkan
+          </SweetAlert>
+        );
+    
+        this.setState({
+          alert: getAlert()
+        });
+      }
+    
+      hideAlert() {
+        console.log('Hiding alert...');
+        this.setState({
+          alert: null
+        });
+      }
+      
     render () {
         return (
             <div>
@@ -46,12 +78,16 @@ class Formulir extends Component {
                             </FormGroup>
                             <FormGroup>
                                 <Label for ="Place">Tempat Bertemu</Label>
-                                <Input type="text" name="text" id="place" value="Sentra Layanan Prioritas" disabled/>
+                                <Input type="text" name="text" id="place" />
                             </FormGroup>
                         </Form>
                         <div className= "btn-detail">
                             <button type="button"  className="btn btn-outline" style={{backgroundColor: '#F37024'}} >Batal</button> 
-                            <button type= "button" className="btn btn-outline" style={{backgroundColor: '#2467A8'}} >Simpan</button>
+                            <button type= "button" className="btn btn-outline" style={{backgroundColor: '#2467A8'}} 
+                                onClick={() => this.deleteThisGoal()}
+                                className='btn btn-danger'>
+                                    <i className="fa fa-trash" aria-hidden="true"></i>
+                                    Simpan</button> {this.state.alert}
                         </div> 
                     </div>
                 </div>
