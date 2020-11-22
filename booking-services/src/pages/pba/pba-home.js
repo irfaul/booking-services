@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Button} from "reactstrap";
 
 import Container from '@material-ui/core/Container';
 
@@ -7,7 +8,7 @@ import Hero from '../../component/hero';
 import MaterialUIPickers from './date-picker'
 import Table from 'react-bootstrap/Table'
 import JadwalPertemuan from './jadwal-pertemuan';
-import RiwayatPertemuan from './detail-riwayat-pertemuan';
+import { Link } from 'react-router-dom';
 
 
 
@@ -61,12 +62,17 @@ class PBAHome extends Component {
                     <tr>
                         <td>Astuti</td>
                         <td>12-11-2020</td>
-                        <td><RiwayatPertemuan/></td>
+                        <td><Link to="riwayat-pertemuan">
+                            <Button>Detail</Button>
+                            </Link>
+                        </td>
                     </tr>
                     <tr>
                         <td>Siti</td>
                         <td>09-11-2020</td>
-                        <td><RiwayatPertemuan/></td>
+                        <Link to="riwayat-pertemuan">
+                        <td><Button>Detail</Button></td>
+                        </Link>
                     </tr>
                 </tbody>
             </Table> 
