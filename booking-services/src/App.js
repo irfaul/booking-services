@@ -15,6 +15,7 @@ import LaporanKinerjaPba from "./pages/pbam/laporan-kinerja-pba";
 import PCUHome from "./pages/pcu/pcu-home";
 import TambahBooking from "./pages/pcu/formulir-booking";
 import Pemberitahuan from "./pages/pba/pemberitahuan"
+import RiwayatPertemuan from "./pages/pba/detail-riwayat-pertemuan";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
 
           {/*Route PBA*/}
           <Route path="/pba/home" exact component={PBAHome} />
+          <Route path="/pba/riwayat-pertemuan" exact component={RiwayatPertemuan}/>
           <Route path="/pba/pemberitahuan" exact component={Pemberitahuan} />
 
           {/*Route PCU*/}

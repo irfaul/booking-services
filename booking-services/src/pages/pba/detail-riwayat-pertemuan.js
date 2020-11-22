@@ -1,102 +1,75 @@
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Modal from 'react-bootstrap/Modal'
-import Container from 'react-bootstrap/Container'
-import Button from 'react-bootstrap/Button'
-import Form from 'react-bootstrap/Form'
-import React, { useState } from 'react'
-import { FormGroup, Input } from "reactstrap";
-import MaterialUIPickers from './date-picker'
+import React, { Component } from "react";
+import "../../style/bpba-detail-user.css";
+import axios from "axios";
+import localforage from "localforage";
+import { FormGroup, Label, Input } from "reactstrap";
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import { Link } from "react-router-dom";
+import FeedbackPCU from "./feedback-pcu";
 
-function MydModalWithGrid(props) {
+class RiwayatPertemuan extends Component {
+  render() {
+    
     return (
-      <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered>
-        <Modal.Header closeButton style={{textAlign:"center", justifyContent:"center"}}>
-          <Modal.Title id="contained-modal-title-vcenter">
-            Detail Pertemuan
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Container>
-            <Row>
-              <Col sm={4}>
-                PCu
-              </Col>
-              <Col sm={1}>
-                :
-              </Col>
-              <Col sm={7}>
-                Joni
-              </Col>
-            </Row>
+      <div className="container detail-frame">
+        <h3
+          style={{
+            marginBottom: "50px",
+            textAlign: "center",
+            fontWeight: "bold",
+          }}>
+          Riwayat Pertemuan
+        </h3>
+        <div className="row justify-content-center align-items-center">
+          <div className="col-md-4 text-center">
+            <AccountCircleIcon
+              style={{ fontSize: 150, marginBottom: "20px" }}
+              color="primary"
+            />
+            <h5>PCu</h5>
+          </div>
+          <div className="col-md-6 text-center">
+            <h4>Astuti</h4>
+            <br></br>
+            <p>astuti@gmail.com</p>
+          </div>
+        </div>
+        
+        <div className="row rounded" style={{borderStyle: 'solid', borderWidth: 'thin', borderColor:'Gainsboro',margin:'20px 0 20px 0'}}>
+        <table className="table table-borderless">
+            <tbody>
+                <tr>
+                    <th className="font-weight-bold">Status</th>
+                    <td>Selesai</td>   
+                </tr>
+                <tr>
+                    <th className="font-weight-bold">Waktu</th>
+                    <td>11 November 2020, 9.00 AM</td>
+                </tr>
+                <tr>
+                    <th className="font-weight-bold">Keperluan</th>
+                    <td>Perihal Investasi</td>   
+                </tr>
+            </tbody>    
+        </table>
+        </div>
 
-            <Row>
-              <Col sm={4}>
-                Status
-              </Col>
-              <Col sm={1}>
-                :
-              </Col>
-              <Col sm={7}>
-                Selesai
-              </Col>
-            </Row>
+        <FeedbackPCU/>
 
-            <Row>
-              <Col sm={4}>
-                Tanggal
-              </Col>
-              <Col sm={1}>
-                :
-              </Col>
-              <Col sm={7}>
-                11-11-2020
-              </Col>
-            </Row>
-
-            <Row>
-              <Col sm={4}>
-                Jam
-              </Col>
-              <Col sm={1}>
-                :
-              </Col>
-              <Col sm={7}>
-                10.00
-              </Col>
-            </Row>
-
-            <Row>
-              <Col sm={4}>
-                Keperluan
-              </Col>
-              <Col sm={1}>
-                :
-              </Col>
-              <Col sm={7}>
-                Perihal Investasi
-              </Col>
-            </Row>
-           
-          </Container>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={props.onHide} variant="warning">Ok</Button>
-        </Modal.Footer>
-      </Modal>
+        <div className="btn-detail">
+          <Link to={"/pba/home"}>
+            <button
+              type="button"
+              className="btn btn-outline"
+              style={{ backgroundColor: "#2568A9" }}
+            >
+              Kembali
+            </button>
+          </Link>
+        </div>
+      </div>
     );
   }
-  
-  export default function RiwayatPertemuan() {
-    const [modalShow, setModalShow] = useState(false);
-  
-    return (
-      <>
-        <Button  variant="warning" className="mr-2" onClick={() => setModalShow(true)}>
-        Detail
-        </Button>
-  
-        <MydModalWithGrid show={modalShow} onHide={() => setModalShow(false)} />
-      </>
-    );
-  }
+}
+
+export default RiwayatPertemuan;
