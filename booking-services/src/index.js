@@ -8,7 +8,7 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 
-axios.defaults.baseURL = 'http://f989654770b5.ngrok.io/';
+axios.defaults.baseURL = 'http://18.220.80.159:8000/';
 
 
 ReactDOM.render(
