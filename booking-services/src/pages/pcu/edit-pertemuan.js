@@ -5,11 +5,11 @@ import {  Form, Label, Input, FormGroup } from 'reactstrap';
 
 
 
-class Formulir extends Component {
+class EditPertemua extends Component {
     render () {
         return (
             <div>
-                <h3>Formulir Booking</h3>
+                <h3>Edit Booking</h3>
                 <div className="auth-wrapper">
                     <div className="auth-inner"> 
                         <Form>
@@ -60,4 +60,4 @@ class Formulir extends Component {
     }
 }
 
-export default Formulir;
+export default EditPertemuan;

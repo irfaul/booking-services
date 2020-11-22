@@ -16,6 +16,7 @@ import PCUHome from "./pages/pcu/pcu-home";
 import TambahBooking from "./pages/pcu/formulir-booking";
 import Pemberitahuan from "./pages/pba/pemberitahuan"
 import RiwayatPertemuan from "./pages/pba/detail-riwayat-pertemuan";
+import DetailPertemuan from "./pages/pcu/detail-pertemuan";
 
 function App() {
   return (
@@ -46,6 +47,8 @@ function App() {
           {/*Route PCU*/}
           <Route path="/pcu/home" exact component={PCUHome}/>
           <Route path="/pcu/tambah-booking" exact component={TambahBooking}/>
+          <Route path="/pcu/detail-pertemuan" exact component={DetailPertemuan}/>
+
 
           {/*Login*/}
           <Route path="/" exact component={Login} />
