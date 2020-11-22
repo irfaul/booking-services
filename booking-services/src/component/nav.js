@@ -36,7 +36,9 @@ export default function Nav() {
                 </a>
             </div>
             <div className="icons-bell">
-                <NotificationsIcon />
+                <IconButton aria-label="notifications">
+                    <NotificationsIcon />
+                </IconButton>
             </div>
         </nav>
     )

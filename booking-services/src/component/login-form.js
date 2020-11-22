@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 import localforage from 'localforage';
+import swal from 'sweetalert';
 
 const LoginForm = (props) => {
 
@@ -21,12 +22,28 @@ const LoginForm = (props) => {
             .then(res => {
                 console.log(res);
                 localforage.setItem('token', res.data.token).then(() => {
-                        history.push('/bpba/home');
+                        if (res.data.role === 'BPBA') {
+                            history.push('/bpba/home');
+                        }else if (res.data.role === 'PBAM'){
+                            history.push('/pbam/home');
+                        }else if (res.data.role === 'PBA'){
+                            history.push('/pba/home');
+                        }else if (res.data.role === 'PCU'){
+                            history.push('/pcu/home');
+                        }else {
+                            history.push('/pcu/home');
+                        }
                     }
                 );
             })
             .catch(err => {
                 // console.log(err)
+                swal({
+                    title: 'Login Salah',
+                    text: null,
+                    icon: 'error',
+                    button: 'close',
+                });
             });
 
     };

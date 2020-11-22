@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import {useHistory} from 'react-router-dom';
-// import localforage from 'localforage';
+import localforage from 'localforage';
 
 //material-ui core
 import {Divider, List, ListItem, ListItemIcon, ListItemText, Collapse} from '@material-ui/core';
@@ -42,9 +42,9 @@ const DrawersMenu = (props) => {
 
     //logout--------------------------------------------------------------------------------------------------------------
     const logout = () => {
-        // localforage.clear().then(() => {
-        //     history.push('/login');
-        // });
+        localforage.clear().then(() => {
+            history.push('/');
+        });
     };
 
     return (

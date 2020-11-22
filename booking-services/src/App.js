@@ -19,29 +19,30 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/bpba/edit-libur/:id" exact component={EditLibur} />
-          <Route path="/bpba/daftar-libur" exact component={DaftarLibur} />
-          <Route
-            path="/bpba/detail-user/edit-user/:id"
-            exact
-            component={Edit}
-          />
-          <Route path="/bpba/tambah-libur" exact component={TambahLibur} />
-          <Route path="/bpba/tambah-user" exact component={Tambah} />
-          <Route
-            path="/bpba/detail-user/:id"
-            exact
-            component={DetailUserPbam}
-          />
+
+          {/*Route BPBA*/}
           <Route path="/bpba/home" exact component={BPBAHome} />
-          <Route path="/" exact component={Login} />
+          <Route path="/bpba/tambah-user" exact component={Tambah} />
+          <Route path="/bpba/detail-user/:id" exact component={DetailUserPbam}/>
+          <Route path="/bpba/detail-user/edit-user/:id" exact component={Edit} />
+          <Route path="/bpba/daftar-libur" exact component={DaftarLibur} />
+          <Route path="/bpba/tambah-libur" exact component={TambahLibur} />
+          <Route path="/bpba/edit-libur/:id" exact component={EditLibur} />
+
+          {/*Route PBAM*/}
           <Route path="/pbam/home" exact component={PBAMHome} />
           <Route path="/pbam/atur-jadwal" exact component={AturJadwal} />
           <Route path="/pbam/laporan-kinerja-pba" exact component={LaporanKinerjaPba} />
           <Route path="/pbam/atur-pba" exact component={AturPba} />
+
+          {/*ROute PBA*/}
           <Route path="/pba/home" exact component={PBAHome} />
 
+          {/*Route PCU*/}
           <Route path="/pcu/home" exact component={PCUHome}/>
+
+          {/*Login*/}
+          <Route path="/" exact component={Login} />
 
         </Switch>
       </Router>
