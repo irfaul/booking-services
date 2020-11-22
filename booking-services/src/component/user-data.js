@@ -10,7 +10,6 @@ const UserData = () => {
     useEffect(() => {
         const getData = async () => {
             const token = await localforage.getItem('token');
-            console.log(token);
 
             axios.get('bpba/users', {
                 headers: {
@@ -18,7 +17,6 @@ const UserData = () => {
                 }
             })
                 .then(res => {
-                    console.log(res);
                     setState(res.data.data);
                 })
                 .catch(err => {
