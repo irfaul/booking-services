@@ -5,11 +5,11 @@ import {  Form, Label, Input, FormGroup } from 'reactstrap';
 
 
 
-class EditPertemua extends Component {
+class EditFormulir extends Component {
     render () {
         return (
             <div>
-                <h3>Edit Booking</h3>
+                <h3>Edit Formulir Booking</h3>
                 <div className="auth-wrapper">
                     <div className="auth-inner"> 
                         <Form>
@@ -46,12 +46,12 @@ class EditPertemua extends Component {
                             </FormGroup>
                             <FormGroup>
                                 <Label for ="Place">Tempat Bertemu</Label>
-                                <Input type="text" name="text" id="place" value="Sentra Layanan Prioritas" disabled/>
+                                <Input type="text" name="text" id="place" />
                             </FormGroup>
                         </Form>
                         <div className= "btn-detail">
                             <button type="button"  className="btn btn-outline" style={{backgroundColor: '#F37024'}} >Batal</button> 
-                            <button type= "button" className="btn btn-outline" style={{backgroundColor: '#2467A8'}} >Simpan</button>
+                            <button type= "button" className="btn btn-outline" style={{backgroundColor: '#2467A8'}} >Ubah</button>
                         </div> 
                     </div>
                 </div>
@@ -60,4 +60,4 @@ class EditPertemua extends Component {
     }
 }
 
-export default EditPertemuan;
+export default EditFormulir;
