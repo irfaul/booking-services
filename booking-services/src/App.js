@@ -18,6 +18,7 @@ import Pemberitahuan from "./pages/pba/pemberitahuan"
 import RiwayatPertemuan from "./pages/pba/detail-riwayat-pertemuan";
 import DetailPertemuan from "./pages/pcu/detail-pertemuan";
 import EditPertemuan from "./pages/pcu/edit-pertemuan";
+import JadwalPertemuanPCU from "./pages/pcu/jadwal-pertemuanPCU";
 
 function App() {
   return (
@@ -52,6 +53,8 @@ function App() {
           <Route path="/pcu/tambah-booking" exact component={TambahBooking}/>
           <Route path="/pcu/detail-pertemuan" exact component={DetailPertemuan}/>
           <Route path="/pcu/edit-pertemuan" exact component={EditPertemuan} />
+          <Route path="/pcu/jadwal-pertemuan" exact component={JadwalPertemuanPCU } />
+
 
 
           {/*Login*/}
