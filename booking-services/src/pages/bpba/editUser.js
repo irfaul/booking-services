@@ -10,7 +10,33 @@ const Edit = (props) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorPassword, setErrorPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [errorConfirmPassword, setErrorConfirmPassword] = useState("");
 
+  const validation = (e) =>{
+    const value = (e.target.value)
+    setPassword(value)
+    if(!value){
+      setErrorPassword('password tidak boleh kosong')
+    } else if (password.length < 5){
+      setErrorPassword('password minimal 6 karakter')
+    }else {
+      setErrorPassword('')
+    }
+  }
+
+  const validationPassword = (e) =>{
+    const value = (e.target.value)
+    setConfirmPassword(value)
+    if(!value){
+      setErrorConfirmPassword('password tidak boleh kosong')
+    } else if (confirmPassword.length < 5 ){
+      setErrorConfirmPassword('password minimal 6 karakter')
+    }else {
+      setErrorConfirmPassword('')
+    }
+  }
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -22,7 +48,12 @@ const Edit = (props) => {
       email: email,
       password: password,
     };
-
+    
+    if (password !== confirmPassword) {
+      alert("Password tidak cocok");
+  } else if (password.length < 6 || !password ){
+    alert("Password belum sesuai ketentuan");
+  }else {
     axios
       .put("bpba/user/update", data, {
         headers: {
@@ -34,7 +65,7 @@ const Edit = (props) => {
       })
       .catch((err) => {
         // console.log(err)
-      });
+      });}
   };
 
   return (
@@ -68,9 +99,32 @@ const Edit = (props) => {
               <input
                 type="password"
                 className="form-control"
-                placeholder="Masukkan Password"
-                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Masukkan password"
+                value={password}
+                onChange={validation}
               />
+              {
+                errorPassword && (
+                  <p className="text-danger">{errorPassword}</p>
+                )
+              }
+            </div>
+
+            <div className="form-group">
+              <label>Konfirmasi Password</label>
+              <input
+                type="password"
+                className="form-control"
+                placeholder="Ulangi password"
+                value={confirmPassword}
+                onChange={validationPassword}
+                
+              />
+              {
+                errorConfirmPassword && (
+                  <p className="text-danger">{errorConfirmPassword}</p>
+                )
+              }
             </div>
           </form>
           <div className="btn-detail">
