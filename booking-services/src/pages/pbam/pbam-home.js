@@ -12,6 +12,7 @@ import Button from 'react-bootstrap/Button'
 import Table from 'react-bootstrap/Table'
 import StarIcon from '@material-ui/icons/Star';
 import { Link } from "react-router-dom";
+import RangkingPba from "../../component/rangking-pba"
 
 
 class PBAMHome extends Component {
@@ -72,27 +73,7 @@ class PBAMHome extends Component {
                 <h5>Rangking PBA</h5> 
                 <div className="line"></div>   
             </div>
-            <Table responsive style={{marginTop:'2em'}}>
-                <thead>
-                    <tr>
-                    <th>Rank.</th>
-                    <th>Nama</th>
-                    <th>Rating</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                    <td>1</td>
-                    <td>Revi</td>
-                    <td><StarIcon/> 4.8</td>
-                    </tr>
-                    <tr>
-                    <td>2</td>
-                    <td>Jiso</td>
-                    <td><StarIcon/> 4.7</td>
-                    </tr>
-                </tbody>
-            </Table> 
+            <RangkingPba/>
             <div className="line"></div>    
             </Container>
         </div>
