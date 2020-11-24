@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b04506fa.chunk.css",
+    "main.js": "/static/js/main.8e7c7d1e.chunk.js",
+    "main.js.map": "/static/js/main.8e7c7d1e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.790c2b9e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.790c2b9e.js.map",
+    "static/css/2.f2b0a79b.chunk.css": "/static/css/2.f2b0a79b.chunk.css",
+    "static/js/2.2fa1c04b.chunk.js": "/static/js/2.2fa1c04b.chunk.js",
+    "static/js/2.2fa1c04b.chunk.js.map": "/static/js/2.2fa1c04b.chunk.js.map",
+    "static/js/3.8d4d1599.chunk.js": "/static/js/3.8d4d1599.chunk.js",
+    "static/js/3.8d4d1599.chunk.js.map": "/static/js/3.8d4d1599.chunk.js.map",
+    "index.html": "/index.html",
+    "service-worker.js": "/service-worker.js",
+    "service-worker.js.map": "/service-worker.js.map",
+    "static/css/2.f2b0a79b.chunk.css.map": "/static/css/2.f2b0a79b.chunk.css.map",
+    "static/css/main.b04506fa.chunk.css.map": "/static/css/main.b04506fa.chunk.css.map",
+    "static/js/2.2fa1c04b.chunk.js.LICENSE.txt": "/static/js/2.2fa1c04b.chunk.js.LICENSE.txt",
+    "static/media/hero-brimo.eb75f696.jpg": "/static/media/hero-brimo.eb75f696.jpg",
+    "static/media/logo-brimo.c390490a.png": "/static/media/logo-brimo.c390490a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.790c2b9e.js",
+    "static/css/2.f2b0a79b.chunk.css",
+    "static/js/2.2fa1c04b.chunk.js",
+    "static/css/main.b04506fa.chunk.css",
+    "static/js/main.8e7c7d1e.chunk.js"
+  ]
+}
