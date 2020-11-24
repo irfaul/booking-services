@@ -22,29 +22,23 @@ class PBAMHome extends Component {
             <Nav />
             <Hero />
                 
-            <Container maxWidth="md" className="user-list">
-                <Row>
-                    <Col style={{textAlign: "right", marginRight:'5em'}}>
+            <Container maxWidth="md" className="user-list-pbam">
+                <Row style={{ textAlign:'center', marginBottom: '20px'}}>
+                    <Col>
                     <Link to="atur-jadwal">
                         <button className="event-icon" >
-                            <EventIcon style={styles.largeIcon} onClick=""/>
+                            <EventIcon style={styles.largeIcon}/>
                         </button>
                         </Link>
+                        <h5 style={{marginTop: '1em'}}>Atur Jadwal</h5>
                     </Col>
                     <Col>
                     <Link to="atur-pba">
                         <button className="event-icon">
-                            <EventIcon style={styles.largeIcon} onClick=""/>
+                            <EventIcon style={styles.largeIcon}/>
                         </button>
                     </Link>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col style={{textAlign: "right", marginTop:'1em',marginRight:'5em'}}>
-                    <h5>Atur Jadwal</h5>
-                    </Col>
-                    <Col style={{ marginTop:'1em'}}>
-                    <h5>Atur PA</h5>
+                    <h5 style={{ marginTop:'1em'}}>Atur PA</h5>
                     </Col>
                 </Row>
             <div>

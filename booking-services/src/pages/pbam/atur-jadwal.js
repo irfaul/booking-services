@@ -1,21 +1,18 @@
-import React, {Component} from 'react';
-import JadwalData from '../../component/jadwal-data';
+import React, { Component } from "react";
+import JadwalData from "../../component/jadwal-data";
 
 class AturJadwal extends Component {
-    render() {
-
-       return (
+  render() {
+    return (
+      <div>
+        <h3>Atur Jadwal</h3>
+        <br />
         <div>
-            <h3>Atur Jadwal</h3>
-            <div>
-                <div>
-                
-                <JadwalData/>
-                </div>
-            </div>
+          <JadwalData />
         </div>
-       )
-    }
+      </div>
+    );
+  }
 }
 
 export default AturJadwal;

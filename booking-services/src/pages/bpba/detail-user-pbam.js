@@ -210,8 +210,10 @@ class DetailUserPbam extends Component {
                     type="select"
                     name="select"
                     id="tipeUser"
-                    onChange={(e) => this.setState({ pbam_id: e.target.value, pbam_name: e.target.innerHTML })}
+                    onChange={(e) => this.setState({ pbam_id: e.target.value, pbam_name: e.target[e.target.selectedIndex].text
+                    })}
                   >
+                    <option selected disabled>--Pilih PBAM--</option>
                     {this.state.pbam.map((data) => (
                       <option value={data._id}>{data.name}</option>
                     ))}

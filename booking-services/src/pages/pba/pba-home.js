@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
+import { Button} from "reactstrap";
 
 import Container from '@material-ui/core/Container';
 
-import Nav from '../../component/nav';
+import NavPba from './nav-pba';
 import Hero from '../../component/hero';
 import MaterialUIPickers from './date-picker'
-import Button from 'react-bootstrap/Button'
 import Table from 'react-bootstrap/Table'
 import JadwalPertemuan from './jadwal-pertemuan';
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -15,12 +17,12 @@ class PBAHome extends Component {
 
     render() {
        return (
-        <div>
-            <Nav />
-            <Hero />
-                
+        <div>    
             <Container maxWidth="md" className="user-list">
-            <div>
+            <NavPba/>
+            <Hero />
+
+            <div style={{marginTop:'2em'}}>
                 <h5>Jadwal Pertemuan PCu</h5> 
                 <div className="line"></div>  
                 <MaterialUIPickers/>
@@ -60,12 +62,17 @@ class PBAHome extends Component {
                     <tr>
                         <td>Astuti</td>
                         <td>12-11-2020</td>
-                        <td><Button variant="warning">Detail</Button></td>
+                        <td><Link to="riwayat-pertemuan">
+                            <Button>Detail</Button>
+                            </Link>
+                        </td>
                     </tr>
                     <tr>
                         <td>Siti</td>
                         <td>09-11-2020</td>
-                        <td><Button variant="warning">Detail</Button></td>
+                        <Link to="riwayat-pertemuan">
+                        <td><Button>Detail</Button></td>
+                        </Link>
                     </tr>
                 </tbody>
             </Table> 

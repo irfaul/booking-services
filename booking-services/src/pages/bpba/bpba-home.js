@@ -14,10 +14,10 @@ class BPBAHome extends Component {
         <div>
             <Nav />
             <Hero />
-            <Container maxWidth="md" className="user-list">
+            <Container maxWidth="md" className="user-list-bpba">
                 <h5>Daftar User</h5>
 
-                <div className="line"></div>
+                <div className="line-bpba"></div>
 
                 <UserData />
             </Container>

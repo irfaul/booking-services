@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../assets/logo-brimo.png';
-import DrawerMenu from './drawer-menu';
+import logo from '../../assets/logo-brimo.png';
+import DrawersMenuPba from './drawer-menu-pba';
 
 //materials core
 import Drawer from '@material-ui/core/Drawer';
@@ -10,7 +10,9 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 
-export default function Nav() {
+import {Link} from 'react-router-dom'
+
+export default function NavPBA() {
 
     const [drawer, setDrawer] = React.useState(false);
 
@@ -24,22 +26,22 @@ export default function Nav() {
                     anchor={'left'}
                     open={drawer}
                     onClose={() => setDrawer(false)}>
-                    <DrawerMenu
+                    <DrawersMenuPba
                         drawer={drawer}
                         setDrawer={setDrawer}
                     />
                 </Drawer>
             </div>
             <div>
-                <a className="navbar-brand" href="/bpba/home">
+                <a className="navbar-brand" href="./home">
                     <img src={logo} className="account-logo" alt="Brimo" loading="lazy" />
                 </a>
             </div>
+            <Link to="/pba/pemberitahuan">
             <div className="icons-bell">
-                <IconButton aria-label="notifications">
-                    <NotificationsIcon />
-                </IconButton>
+                <NotificationsIcon color="error" style={{transform:'scale(1.5'}}/>
             </div>
+            </Link>
         </nav>
     )
 }

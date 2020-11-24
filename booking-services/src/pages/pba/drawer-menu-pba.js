@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import {useHistory} from 'react-router-dom';
-import localforage from 'localforage';
+// import localforage from 'localforage';
 
 //material-ui core
 import {Divider, List, ListItem, ListItemIcon, ListItemText, Collapse} from '@material-ui/core';
@@ -12,6 +12,7 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import TodayIcon from '@material-ui/icons/Today';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import {Link} from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
 
@@ -35,16 +36,16 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-const DrawersMenu = (props) => {
+const DrawersMenuPba = (props) => {
     const classes = useStyles();
     let history = useHistory();
     const {drawer, setDrawer} = props;
 
     //logout--------------------------------------------------------------------------------------------------------------
     const logout = () => {
-        localforage.clear().then(() => {
-            history.push('/');
-        });
+        // localforage.clear().then(() => {
+        //     history.push('/login');
+        // });
     };
 
     return (
@@ -69,21 +70,15 @@ const DrawersMenu = (props) => {
                     <ListItemText primary="Beranda" />
                 </ListItem>
 
-                {/* Notifikasi */}
+                {/* Pemberitahuan */}
+                <Link to="/pba/pemberitahuan">
                 <ListItem button onClick={null}>
                     <ListItemIcon className={classes.listItem}>
                         <NotificationsIcon />
                     </ListItemIcon>
-                    <ListItemText primary="Notifikasi" />
+                    <ListItemText primary="Pemberitahuan" />
                 </ListItem>
-
-                {/* Jadwal Petemuan */}
-                <ListItem button onClick={null}>
-                    <ListItemIcon className={classes.listItem}>
-                        <TodayIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Jadwal Pertemuan" />
-                </ListItem>
+                </Link>
 
                 {/* logout */}
                 <div style={{position:'fixed', bottom:1, width: 250}}>
@@ -101,4 +96,4 @@ const DrawersMenu = (props) => {
     );
 };
 
-export default DrawersMenu;
+export default DrawersMenuPba;

@@ -100,7 +100,7 @@ function MydModalWithGrid(props) {
                   style={{ textAlign: "center" }}
                   onChange={(e) => setIDPBA(e.target.value)}
                 >
-                  <option value="">Pilih PBA</option>
+                  <option selected disabled>--Pilih PBA--</option>
                   {state.map((pba) => (
                     <option value={pba._id}>{pba.name}</option>
                   ))}

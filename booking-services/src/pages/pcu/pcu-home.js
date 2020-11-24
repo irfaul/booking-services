@@ -10,6 +10,8 @@ import Hero from '../../component/hero';
 
 import '../../style/pcu-home.css'
 
+import { Link } from "react-router-dom";
+
 
 class PCUHome extends Component {
 
@@ -20,9 +22,11 @@ class PCUHome extends Component {
                 <Hero />
                 <div className="btn-detail">
                     <div className="mb-2">
-                        <Button variant="primary" size="lg">
-                            TAMBAH BOOKING
-                        </Button>
+                        <Link to="tambah-booking">
+                            <Button variant="primary" size="lg">
+                                TAMBAH BOOKING
+                            </Button>
+                        </Link>
                     </div>
                 </div>
                 <Container maxWidth="md" className="user-list">

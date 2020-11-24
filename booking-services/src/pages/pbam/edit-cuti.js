@@ -24,12 +24,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function MydModalWithGrid(props) {
-  const [start_at, setStartTime] = useState("");
-  const [end_at, setFinishTime] = useState("");
   const [date, setDate] = useState("");
   const classes = useStyles();
 
-  const handleEditSchedule = async (e) => {
+  const handleEditCuti= async (e) => {
     e.preventDefault();
 
     const token = await localforage.getItem("token");
@@ -38,8 +36,6 @@ function MydModalWithGrid(props) {
       pba_id: props.data.pba_id,
       pba_name: props.data.pba_name,
       date: date,
-      start_at: start_at,
-      end_at: end_at,
     };
 
     axios
@@ -62,7 +58,7 @@ function MydModalWithGrid(props) {
         style={{ textAlign: "center", justifyContent: "center" }}
       >
         <Modal.Title id="contained-modal-title-vcenter">
-          Edit Jadwal
+          Edit Cuti
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
@@ -92,50 +88,10 @@ function MydModalWithGrid(props) {
               </Col>
             </Row>
             <Row>
-              <Col sm={6}>Waktu Mulai</Col>
-              <Col sm={6}>
-                <form className={classes.container} noValidate>
-                  <TextField
-                    id="time"
-                    type="time"
-                    defaultValue="07:30"
-                    className={classes.textField}
-                    InputLabelProps={{
-                      shrink: true,
-                    }}
-                    inputProps={{
-                      step: 300, // 5 min
-                    }}
-                    onChange={(e) => setStartTime(e.target.value)}
-                  />
-                </form>
-              </Col>
-            </Row>
-            <Row>
-              <Col sm={6}>Waktu Selesai</Col>
-              <Col sm={6}>
-                <form className={classes.container} noValidate>
-                  <TextField
-                    id="time"
-                    type="time"
-                    defaultValue="07:30"
-                    className={classes.textField}
-                    InputLabelProps={{
-                      shrink: true,
-                    }}
-                    inputProps={{
-                      step: 300, // 5 min
-                    }}
-                    onChange={(e) => setFinishTime(e.target.value)}
-                  />
-                </form>
-              </Col>
-            </Row>
-            <Row>
               <Col sm={6}></Col>
               <Col sm={6}>
-                <Button variant="success" onClick={handleEditSchedule}>
-                  Edit Jam Kerja
+                <Button variant="success" onClick={handleEditCuti}>
+                  Edit Cuti
                 </Button>
               </Col>
             </Row>
@@ -149,7 +105,7 @@ function MydModalWithGrid(props) {
   );
 }
 
-export default function EditJadwal(props) {
+export default function EditCuti(props) {
   const [modalShow, setModalShow] = useState(false);
 
   return (

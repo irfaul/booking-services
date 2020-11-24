@@ -3,6 +3,11 @@
     text-align: left;
 }
 
+.user-list-pbam {
+    padding-top: 20px;
+    text-align: left;
+}
+
 .user-list h5 {
     font-weight: 700;
     color: black;

@@ -9,10 +9,10 @@ class DaftarLibur extends Component {
     render() {
        return (
         <div>
-            <Container maxWidth="md" className="user-list">
+            <Container maxWidth="md" className="user-list-bpba">
                 <h5>Daftar Libur</h5>
 
-                <div className="line"></div>
+                <div className="line-bpba"></div>
 
                 <HolidayData />
             </Container>
