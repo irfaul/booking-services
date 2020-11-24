@@ -3,6 +3,7 @@ import axios from "axios";
 import { FormGroup, Label, Input } from "reactstrap";
 import "../../style/bpba-tambah.css";
 import { Link, useHistory } from "react-router-dom";
+import localforage from "localforage";
 
 const Tambah = () => {
   let history = useHistory();
@@ -10,10 +11,40 @@ const Tambah = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("");
+  const [errorPassword, setErrorPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [errorConfirmPassword, setErrorConfirmPassword] = useState("");
 
-  const handleSubmit = (e) => {
+  const validation = (e) =>{
+    const value = (e.target.value)
+    setPassword(value)
+    if(!value){
+      setErrorPassword('password tidak boleh kosong')
+    } else if (password.length < 5 ){
+      setErrorPassword('password minimal 6 karakter')
+    }else {
+      setErrorPassword('')
+    }
+  }
+
+  const validationPassword = (e) =>{
+    const value = (e.target.value)
+    setConfirmPassword(value)
+    if(!value){
+      setErrorConfirmPassword('password tidak boleh kosong')
+    } else if (confirmPassword.length < 5){
+      setErrorConfirmPassword('password minimal 6 karakter')
+    }else {
+      setErrorConfirmPassword('')
+    }
+  }
+  
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const token = await localforage.getItem("token");
+    
     const data = {
       name: name,
       email: email,
@@ -22,16 +53,26 @@ const Tambah = () => {
       status: 1,
     };
 
+    if (password !== confirmPassword) {
+      alert("Password tidak cocok");
+  } else if (password.length < 6 || !password ){
+    alert("Password belum sesuai ketentuan");
+  }else {
+      // make API call 
     axios
-      .post("guest/register", data)
+      .post("guest/register", data, {
+        headers: {
+          Authorization: `${token}`,
+        },
+      })
       .then((res) => {
         history.push("/bpba/home");
       })
       .catch((err) => {
-        // console.log(err)
-      });
+      });}
   };
 
+  
   return (
     <div>
       <h3>Tambah User</h3>
@@ -81,8 +122,31 @@ const Tambah = () => {
                 type="password"
                 className="form-control"
                 placeholder="Masukkan password"
-                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+                onChange={validation}
               />
+              {
+                errorPassword && (
+                  <p className="text-danger">{errorPassword}</p>
+                )
+              }
+            </div>
+
+            <div className="form-group">
+              <label>Konfirmasi Password</label>
+              <input
+                type="password"
+                className="form-control"
+                placeholder="Ulangi password"
+                value={confirmPassword}
+                onChange={validationPassword}
+                
+              />
+              {
+                errorConfirmPassword && (
+                  <p className="text-danger">{errorConfirmPassword}</p>
+                )
+              }
             </div>
           </form>
           <div className="btn-detail">

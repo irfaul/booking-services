@@ -41,9 +41,11 @@ class PCUHome extends Component {
                                         <Row style={{marginTop:'0.98em'}}>
                                             <Col sm={2}>
                                                 Selesai
-                                                <Button style={{marginTop:'2em'}} color="primary" className="mr-2">
-                                                    Detail
-                                                </Button>
+                                                <Link to="detail-pertemuan">
+                                                    <Button style={{marginTop:'2em'}} color="primary" className="mr-2">
+                                                        Detail
+                                                    </Button>
+                                                </Link>
                                             </Col>
                                         </Row>
                                 </tr>

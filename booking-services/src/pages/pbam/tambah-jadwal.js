@@ -289,38 +289,6 @@ function MydModalWithGrid(props) {
               </Row>
             </div>
           )}
-          {/* <Row>
-            <Col sm={6}>Jam Kerja</Col>
-            <Col sm={6}>
-              <Form.Row>
-                <Col>
-                  <Form.Control type="" placeholder="08.00" />
-                </Col>
-                -
-                <Col>
-                  <Form.Control type="" placeholder="13.00" />
-                </Col>
-              </Form.Row>
-            </Col>
-          </Row>
-
-          <Row>
-            <Col sm={6}>Cuti</Col>
-            <Col sm={6}>
-              <FormGroup>
-                <Input
-                  type="select"
-                  name="select"
-                  id="tipeUser"
-                  style={{ textAlign: "center" }}
-                  size="sm"
-                >
-                  <option value="1">Tidak</option>
-                  <option value="2">Ya</option>
-                </Input>
-              </FormGroup>
-            </Col>
-          </Row> */}
         </Container>
       </Modal.Body>
       <Modal.Footer>

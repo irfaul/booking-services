@@ -12,7 +12,7 @@ class DetailUserPbam extends Component {
   constructor() {
     super();
     this.state = {
-      user: [],
+      user: {},
       token: "",
       showing: {},
       description: "enable",
@@ -73,7 +73,7 @@ class DetailUserPbam extends Component {
 
     const data = {
       pbam_id: this.state.pbam_id,
-      pbam_name: this.state.pbam_name
+      pbam_name: this.state.pbam_name,
     };
 
     axios
@@ -194,14 +194,21 @@ class DetailUserPbam extends Component {
               )}
             </div>
           </div>
-          {this.state.user.role == "PBA" ? (
+          {this.state.user.role === "PBA" ? (
             <div className="col-md-5 text-center box-wrapper">
-              <p className="text-left font-weight-light">
-                PBAM :{" "}
-                <span className="font-weight-bold">
-                  {this.state.user.assign_to.name}
-                </span>
-              </p>
+              {this.state.user.assign_to === undefined ? (
+                <p className="text-left font-weight-light">
+                  PBAM :{" "}
+                  <span className="font-weight-bold">PBAM belum diatur</span>
+                </p>
+              ) : (
+                <p className="text-left font-weight-light">
+                  PBAM :{" "}
+                  <span className="font-weight-bold">
+                    {this.state.user.assign_to.name}
+                  </span>
+                </p>
+              )}
               <hr />
               <div className="form-group">
                 <FormGroup>
@@ -210,10 +217,16 @@ class DetailUserPbam extends Component {
                     type="select"
                     name="select"
                     id="tipeUser"
-                    onChange={(e) => this.setState({ pbam_id: e.target.value, pbam_name: e.target[e.target.selectedIndex].text
-                    })}
+                    onChange={(e) =>
+                      this.setState({
+                        pbam_id: e.target.value,
+                        pbam_name: e.target[e.target.selectedIndex].text,
+                      })
+                    }
                   >
-                    <option selected disabled>--Pilih PBAM--</option>
+                    <option selected disabled>
+                      --Pilih PBAM--
+                    </option>
                     {this.state.pbam.map((data) => (
                       <option value={data._id}>{data.name}</option>
                     ))}

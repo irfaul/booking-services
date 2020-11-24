@@ -2,46 +2,14 @@ import React, {Component} from 'react';
 import '../../style/form-bookingPCU.css';
 import {  Form, Label, Input, FormGroup } from 'reactstrap';
 
-import SweetAlert from 'react-bootstrap-sweetalert';
 
 
 
-class Formulir extends Component {
-    constructor(props) {
-        super(props);
-    
-        this.state = {
-          alert: null
-        };
-      } 
-    
-      deleteThisGoal() {
-        const getAlert = () => (
-          <SweetAlert 
-            success 
-            title="Sukses !" 
-            onConfirm={() => this.hideAlert()}
-          >
-            Pertemuan Berhasil di Jadwalkan
-          </SweetAlert>
-        );
-    
-        this.setState({
-          alert: getAlert()
-        });
-      }
-    
-      hideAlert() {
-        console.log('Hiding alert...');
-        this.setState({
-          alert: null
-        });
-      }
-      
+class EditFormulir extends Component {
     render () {
         return (
             <div>
-                <h3>Formulir Booking</h3>
+                <h3>Edit Formulir Booking</h3>
                 <div className="auth-wrapper">
                     <div className="auth-inner"> 
                         <Form>
@@ -83,11 +51,7 @@ class Formulir extends Component {
                         </Form>
                         <div className= "btn-detail">
                             <button type="button"  className="btn btn-outline" style={{backgroundColor: '#F37024'}} >Batal</button> 
-                            <button type= "button" className="btn btn-outline" style={{backgroundColor: '#2467A8'}} 
-                                onClick={() => this.deleteThisGoal()}
-                                className='btn btn-danger'>
-                                    <i className="fa fa-trash" aria-hidden="true"></i>
-                                    Simpan</button> {this.state.alert}
+                            <button type= "button" className="btn btn-outline" style={{backgroundColor: '#2467A8'}} >Ubah</button>
                         </div> 
                     </div>
                 </div>
@@ -96,4 +60,4 @@ class Formulir extends Component {
     }
 }
 
-export default Formulir;
+export default EditFormulir;

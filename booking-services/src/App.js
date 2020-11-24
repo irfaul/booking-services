@@ -16,6 +16,10 @@ import PCUHome from "./pages/pcu/pcu-home";
 import TambahBooking from "./pages/pcu/formulir-booking";
 import Pemberitahuan from "./pages/pba/pemberitahuan"
 import RiwayatPertemuan from "./pages/pba/detail-riwayat-pertemuan";
+import DetailPertemuan from "./pages/pcu/detail-pertemuan";
+import EditPertemuan from "./pages/pcu/edit-pertemuan";
+import JadwalPertemuanPCU from "./pages/pcu/jadwal-pertemuanPCU";
+import NotNotif from "./pages/pcu/not-notif";
 
 function App() {
   return (
@@ -31,6 +35,8 @@ function App() {
           <Route path="/bpba/daftar-libur" exact component={DaftarLibur} />
           <Route path="/bpba/tambah-libur" exact component={TambahLibur} />
           <Route path="/bpba/edit-libur/:id" exact component={EditLibur} />
+          
+
 
           {/*Route PBAM*/}
           <Route path="/pbam/home" exact component={PBAMHome} />
@@ -46,6 +52,12 @@ function App() {
           {/*Route PCU*/}
           <Route path="/pcu/home" exact component={PCUHome}/>
           <Route path="/pcu/tambah-booking" exact component={TambahBooking}/>
+          <Route path="/pcu/detail-pertemuan" exact component={DetailPertemuan}/>
+          <Route path="/pcu/edit-pertemuan" exact component={EditPertemuan} />
+          <Route path="/pcu/jadwal-pertemuan" exact component={JadwalPertemuanPCU } />
+          <Route path="/pcu/not-notification" exact component={NotNotif  } />
+
+
 
           {/*Login*/}
           <Route path="/" exact component={Login} />
